@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "Click Counter MP3 Player",
+  "version": "1.0",
+  "description": "Plays an MP3 file after every 10 mouse clicks.",
+  "permissions": [
+    "storage"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}
